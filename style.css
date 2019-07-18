@@ -1,0 +1,153 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1, h2, h3{
+    font-weight: normal;
+}
+
+.header1{
+    background: "yellow";
+    border: 1px solid #E0E0E0;
+    box-shadow: 0 1px 0 0 #E0E0E0;
+    padding-bottom: 25px;
+    padding-left: 10px;
+    height: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1{
+    margin-top: 14px;
+    font-size: 20px;
+}
+
+.header2{
+    margin-left: 75%;
+    margin-top: -40px;
+    font-size: 17px;
+    position: fixed;
+}
+
+span{
+    margin-top: -20px;
+}
+
+button{
+    border: 1px solid dodgerblue;
+    height: 36px;
+    width: 80px;
+    font-size: 17px;
+    background-color: white;
+    color: dodgerblue;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.container2{
+    margin: auto;
+    text-align: center;
+    height: 100%;
+    
+}
+
+h2{
+    padding-top: 20px;
+    font-size: 60px;
+}
+
+.container3 p{
+    margin-top: -25px;
+    line-height: 30px;
+    font-size: 20px;
+
+}
+
+h3{
+    background-color: #f5f5f5;
+    text-align: center;
+    padding-top: 6px;
+    margin-top: 0;
+    font-size: 25px;
+    height: 38px;
+    width: 100%;
+    text-decoration: none;
+    border-bottom: 1px solid #E0E0E0;
+    border-radius: 2.5%;
+}
+
+#free-container{
+    margin-top: 3%;
+    border: 1px solid #E0E0E0;
+    margin-left: 433px;
+    height: 335px;
+    width: 300px;
+    color: black;
+    text-align: center;
+    border-radius: 2%;
+}
+
+#free-container button{
+    border: 1px solid dodgerblue; 
+    height: 50px;
+    width: 85%;
+    font-size: 22px;
+    border-radius: 8px 8px 8px 8px;
+    margin-top: 25px;
+}
+
+#free1{
+    color: black;
+    font-size: 45px;
+}
+
+#free2{
+    color: gray;
+    font-size: 35px;
+}
+
+#free3{
+    line-height: 25px;
+    font-size: 18px;
+}
+
+#pro-container{
+    margin-top: -337px;
+    border: 1px solid #E0E0E0;
+    margin-left: 773px;
+    height: 335px;
+    width: 300px;
+    text-align: center;
+    border-radius: 2%;
+}
+
+#pro-container button{
+    background-color: dodgerblue;
+    color: white;
+    border: 1px solid dodgerblue; 
+    height: 50px;
+    width: 85%;
+    font-size: 22px;
+    border-radius: 8px 8px 8px 8px;
+    margin-top: 25px;
+}
+
+#enterprise-container{  
+    margin-top: -337px;
+    border: 1px solid #E0E0E0;
+    margin-left: 1113px;
+    height: 335px;
+    width: 300px;
+    text-align: center;
+    border-radius: 2%;
+}
+
+#enterprise-container button{
+    background-color: dodgerblue;
+    color: white;
+    border: 1px solid dodgerblue; 
+    height: 50px;
+    width: 85%;
+    font-size: 22px;
+    border-radius: 8px 8px 8px 8px;
+    margin-top: 25px;
+}
+
