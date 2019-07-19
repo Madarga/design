@@ -6,12 +6,6 @@ h1, h2, h3{
     font-weight: normal;
 }
 
-li{
-    list-style: none;
-    color: gray;
-    font-weight: normal;
-}
-
 .header1{
     background: "yellow";
     border: 1px solid #E0E0E0;
@@ -59,14 +53,14 @@ button{
 h2{
     padding-top: 20px;
     font-size: 57px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arial';
 }
 
 .container3 p{
-    margin-top: -25px;
+    margin: -25px auto 0;
     line-height: 30px;
     font-size: 20px;
-
+    width: 37%;
 }
 
 h3{
@@ -90,11 +84,11 @@ h3{
 
 #free-container{
     border: 1px solid #E0E0E0;
-    height: 335px;
+    height: 332px;
     width: 300px;
     float: left;
     text-align: center;
-    border-radius: 2%;
+    border-radius: 1.5%;
 }
 
 #free-container button{
@@ -102,19 +96,19 @@ h3{
     height: 50px;
     width: 85%;
     font-size: 21px;
-    border-radius: 8px 8px 8px 8px;
+    border-radius: 5px 5px 5px 5px;
     margin: auto;
     margin-bottom: 10px;
 }
 
 #free1{
     color: black;
-    font-size: 40px;
+    font-size: 42px;
 }
 
 #free2{
     color: gray;
-    font-size: 32px;
+    font-size: 33px;
 }
 
 #free3{
@@ -124,51 +118,52 @@ h3{
 
 #pro-container{
     border: 1px solid #E0E0E0;
-    height: 335px;
+    border-radius: 1.5%;
+    height: 332px;
     width: 300px;
     float: left;
     margin-left: 29px;
     text-align: center;
-    border-radius: 2%;
 }
 
 #pro-container button{
+    border: 1px solid dodgerblue;
+    border-radius: 5px 5px 5px 5px;
     background-color: dodgerblue;
     color: white;
-    border: 1px solid dodgerblue; 
+    margin: auto;
     height: 50px;
     width: 85%;
     font-size: 21px;
-    border-radius: 8px 8px 8px 8px;
-    margin: auto;
 }
 
 #enterprise-container{  
     border: 1px solid #E0E0E0;
-    height: 335px;
+    border-radius: 1.5%;
+    height: 332px;
     width: 300px;
     float: right;
     text-align: center;
-    border-radius: 2%;
 }
 
 #enterprise-container button{
+    border: 1px solid dodgerblue; 
+    border-radius: 5px 5px 5px 5px;
     background-color: dodgerblue;
     color: white;
-    border: 1px solid dodgerblue; 
     height: 50px;
     width: 85%;
     font-size: 21px;
-    border-radius: 8px 8px 8px 8px;
     margin: auto;
 }
 
 .container5{
-    margin-top: 100px;
+    margin-top: 75px;
 }
 
 .container6{
     border-top: 1px solid #E0E0E0;
+    padding-top: 22px;
     text-align: left;
     line-height: 25px;
     margin: auto;
@@ -176,7 +171,7 @@ h3{
 }
 
 h4{
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 1px;
 }
 
@@ -198,7 +193,7 @@ h4{
 
 .logo-container span{
     color: gray;
-    font-size: 13.5px;
+    font-size: 14px;
 }
 
 .features-container{
@@ -214,6 +209,13 @@ h4{
 .about-container{
     float: right;
     margin-right: 120px;
+}
+
+li{
+    list-style: none;
+    color: gray;
+    font-weight: normal;
+    font-size: 17px;
 }
 
 @media screen and (max-width: 1250px){
@@ -304,7 +306,7 @@ media screen and (max-width: 1100px){
     }
 
     .container5{
-        margin-top: 820px;
+        margin-top: 790px;
     }
 
     .container6{
@@ -321,17 +323,17 @@ media screen and (max-width: 1100px){
     }
 
     .features-container{
-        margin-left: 80px;
+        margin-left: 70px;
         text-align: center;
     }
 
     .resources-container{
-        margin-left: 80px;
+        margin-left: 75px;
         text-align: center;
     }
 
     .about-container{
-        margin-left: 80px;
+        margin-left: 70px;
         text-align: center;
     }
 }
