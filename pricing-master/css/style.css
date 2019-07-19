@@ -1,0 +1,64 @@
+.menubar{
+    border: 1px solid #E0E0E0;
+    box-shadow: 0 1px 0 0 #E0E0E0;
+}
+
+.container{
+
+}
+
+.container_1{
+    margin-left: 5px;
+    margin-top: -4px;
+    float: left;
+    height: 35px;
+}
+
+#navbarNav{
+    width: 30px;
+    float: right;
+    margin-top: -1px;
+    margin-left: 1247px;
+}
+
+p{
+    width: 36.5%;
+    margin: auto auto 10px auto;
+    font-size: 20px;
+}
+
+.pricing-header{
+
+}
+
+h5{
+    color: black;
+}
+
+.logo-container{
+    float: left;
+}
+
+.logo-container h4{
+    background-color: #483D8B;
+    border-radius: 3px 3px 3px 3px;
+    text-align: center;
+    font-weight: 550;
+    color: white;
+    width: 26px;
+    height: 26px;
+    padding-top: 1px;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.logo-container span{
+    color: #6c757d;
+    font-size: 14px;
+}
+
+#c1{
+    height: 335px;
+    width: 965px;
+    margin: auto;
+}
