@@ -46,7 +46,8 @@ main .container{
 }
 
 .row p{
-    line-height: 10px;
+    margin-top: -10px;
+    line-height: 15px;
 }
 
 main .row{
@@ -87,7 +88,7 @@ main h2{
 }
 
 main button{
-    margin-top: 25px;
+    margin-top: 22px;
     border-radius: 5px 5px 5px 5px;
     box-shadow: none;
     font-size: 25px;
@@ -95,15 +96,50 @@ main button{
 }
 
 main #lead{
-    margin-top: 25px;
+    width: 90px;
+    margin-top: 0px;
+    margin-left: 70px;
     margin-bottom: 40px;
-    color: #101010;
-    font-size: 42px;
+    color: #202020;
+    font-size: 50px;
+    font-weight: 400;
 }
 
- main .btn{
-    border-radius: 5px 5px 5px 5px;
+main #lead2{
+    width: 100px;
+    margin-top: -108px;
+    margin-left: 130px;
+    margin-bottom: 40px;
+    color: #696969;
+    font-size: 40px;
+}
+
+main #lead3{
+    width: 90px;
+    margin-top: 0px;
+    margin-left: 52px;
+    margin-bottom: 40px;
+    color: #202020;
+    font-size: 50px;
+}
+
+main #lead4{
+    width: 100px;
+    margin-top: -108px;
+    margin-left: 140px;
+    margin-bottom: 40px;
+    color: #696969;
+    font-size: 40px;
+}
+
+ main #btn1{
+    font-size: 25px;
+}
+
+main #btn2{
+    font-size: 25px;
     box-shadow: none;
+    border: none;
 }
 
 footer{
@@ -140,4 +176,22 @@ footer h4{
 
 ul li a{
     color: #696969;
+}
+
+@media screen and (max-width: 700px){
+    main .row{
+
+    }
+
+    .row #card1{
+
+    }
+
+    .row #card1{
+        margin-left: 180px;
+    }
+
+    .row #card2{
+        margin: 400px auto 0;
+    }
 }
