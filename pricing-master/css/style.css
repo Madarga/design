@@ -80,3 +80,69 @@ h5{
     width: 965px;
     margin: auto;
 }
+
+#footer-2{
+
+}
+
+@media (max-width: 650px){
+    #footer{
+        margin-top: 250px;
+    }
+
+    #footer-2{
+        width: 300px;
+        margin: auto;
+    }
+
+    footer .container{
+        padding-top: 0px;
+        margin-top: -25px;
+    }
+
+    .logo-container h4{
+        margin-left: 46px;
+    }
+
+    .logo-container span{
+        margin-top: 5px;
+        margin-left: 19px;
+    }
+
+    .col-sm{
+        margin-left: 90px;
+        margin-top: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 940px){
+    #footer{
+        margin-top: 250px;
+    }
+
+    #footer-2{
+        width: 300px;
+        margin: auto;
+    }
+
+    footer .container{
+        padding-top: 0px;
+        margin-top: -25px;
+    }
+
+    .logo-container h4{
+        margin-left: 46px;
+    }
+
+    .logo-container span{
+        margin-top: 5px;
+        margin-left: 19px;
+    }
+
+    .col-sm{
+        margin-left: 90px;
+        margin-top: 15px;
+        text-align: center;
+    }
+}
