@@ -1,34 +1,52 @@
+body{
+    background: white;
+}
+
 .menubar{
     border: 1px solid #E0E0E0;
     box-shadow: 0 1px 0 0 #E0E0E0;
 }
 
-.container{
-
+header{
+    margin-top: 0px;
+    background: white;
 }
 
-.container_1{
-    margin-left: 5px;
-    margin-top: -4px;
+
+#header-logo{
     float: left;
     height: 35px;
 }
 
+nav{
+    width: 100%;
+    padding-right: -500px;
+}
+
 #navbarNav{
-    width: 30px;
-    float: right;
-    margin-top: -1px;
-    margin-left: 1247px;
+    margin-left: 100px;
+}
+
+#footer{
+    background: none;
+    border-top: 1px solid #ced4da;
+    width: 50%;
+    margin: 73px auto 0;
+    clear: both;
+}
+
+footer .container{
+    background: none;
+    padding-top: 10px;
+    padding-left: 0px;
+    padding-right: 90px;
+    text-align: left;
 }
 
 p{
     width: 36.5%;
     margin: auto auto 10px auto;
     font-size: 20px;
-}
-
-.pricing-header{
-
 }
 
 h5{

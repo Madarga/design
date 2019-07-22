@@ -546,7 +546,7 @@ pre code {
 }
 
 .container {
-  width: 100%;
+  width: 50%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -3675,17 +3675,6 @@ input[type="button"].btn-block {
   background-color: #007bff;
 }
 
-.nav-fill .nav-item {
-  flex: 1 1 auto;
-  text-align: center;
-}
-
-.nav-justified .nav-item {
-  flex-basis: 0;
-  flex-grow: 1;
-  text-align: center;
-}
-
 .tab-content > .tab-pane {
   display: none;
 }
@@ -3729,7 +3718,7 @@ input[type="button"].btn-block {
   display: flex;
   flex-direction: column;
   padding-left: 0;
-  margin-bottom: 0;
+  margin-bottom: 200px;
   list-style: none;
 }
 
@@ -3752,7 +3741,8 @@ input[type="button"].btn-block {
 .navbar-collapse {
   flex-basis: 100%;
   flex-grow: 1;
-  align-items: center;
+  align-items: right;
+  border: 1px solid green;
 }
 
 .navbar-toggler {
@@ -4126,12 +4116,6 @@ input[type="button"].btn-block {
 
 .card-header + .list-group .list-group-item:first-child {
   border-top: 0;
-}
-
-.card-footer {
-  padding: 0.75rem 1.25rem;
-  background-color: rgba(0, 0, 0, 0.03);
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 .card-footer:last-child {
@@ -8460,7 +8444,7 @@ html {
 body {
   margin: 0;
   height: 100%;
-  background: #343A40;
+  background: white;
 }
 
 a {
