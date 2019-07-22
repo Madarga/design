@@ -1,0 +1,143 @@
+header{
+    color: #000000;
+}
+
+.navbar{
+    border: 1px solid #BEBEBE;
+    color: #000000;
+}
+
+.nav{
+    float: right;
+    color: #000000;
+    margin-right: 200px;
+    width: 275px;
+    height: 30px;
+}
+
+header a{
+    color: #000000;
+}
+
+header button{
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: none;
+    height: 35px;
+    font-size: 18px;
+    width: 90px;
+    margin: -2px auto;
+}
+
+main{
+    margin-top: 100px;
+}
+
+main .container{
+    width: 735px;
+}
+
+.container p{
+    font-size: 21px;
+    margin-top: 5px; 
+}
+
+.container h1{
+    font-size: 55px;
+}
+
+.row p{
+    line-height: 10px;
+}
+
+main .row{
+    width:1000px;
+    margin: 45px auto  0;
+}
+
+.card{
+    grid-column-gap: 1px;
+    width: 350px;
+    height: 350px;
+}
+
+#card1{
+    float: left;
+}
+
+#card2{
+    float: left;
+}
+
+#card3{
+    float: right;
+}
+
+.card-title{
+    background: #F0F0F0;
+    width: 315.3px;
+    margin-left: -15px;
+    height: 50px;
+    padding-top: 12px;
+}
+
+main h2{
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+}
+
+main button{
+    margin-top: 25px;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: none;
+    font-size: 25px;
+    height: 60px;
+}
+
+main #lead{
+    margin-top: 25px;
+    margin-bottom: 40px;
+    color: #101010;
+    font-size: 42px;
+}
+
+ main .btn{
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: none;
+}
+
+footer{
+    margin-top: 85px;
+}
+
+footer .container{
+    border-top: 1px solid #BEBEBE;
+    padding-top: 45px;
+    width: 1000px;
+}
+
+.logo-container h3{
+    background: #483D8B;
+    border-radius: 3px 3px 3px 3px;
+    text-align: center;
+    color: white;
+    width: 25px;
+    height: 25px;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.logo-container span{
+    color: #696969;
+    font-size: 15px;
+}
+
+footer h4{
+    font-size: 20px;
+}
+
+ul li a{
+    color: #696969;
+}
