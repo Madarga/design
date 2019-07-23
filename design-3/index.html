@@ -6,7 +6,10 @@
 
         <!-- Bootstrap -->
         <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/font-awesome/css/font-awesome.min.css">
+        
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="node_modules/bootstrap/node_modules/font-awesome/css/font-awesome.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
@@ -16,12 +19,12 @@
                     <a class="navbar-brand" href="#">Logo</a>
                     <div class="collapse navbar-collapse navbar-nav row justify-content-end" id="navbarSupportedContent">
                         <div class="row">
-                            <div class="col">
+                            <div class="col d-inline w-100">
                                 <form class="form-inline my-2 my-lg-0 d-inline w-100">
                                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                                 </form>
                             </div>
-                            <div class="col">
+                            <div class="col row justify-content-between">
                                 <nav class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Category
@@ -33,8 +36,8 @@
                                     </div>
                                 </nav>
                             </div>
-                            <div class="col">
-                                <button class="btn btn-info ">Sign in</button>
+                            <div class="col row justify-content-end">
+                                <button class="btn btn-info "><span class="glyphicon glyphicon-shopping-cart"></span>&nbspSign in</button>
                             </div>
                         </div>
                         
@@ -43,7 +46,7 @@
                 </nav>
             </div>
         </header>
-        <menu>
+        <main>
             <div class="container">
                 <h1>Blog Dummy Theme Name</h1>
                 <div class="row">
@@ -68,6 +71,47 @@
                                 </div>
                                 <div class="col-md-8 row justify-content-end">
                                     <h2>Average Rating</h2>
+                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="bar" style="width: 200px; height: 20px; background: #009494;"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="bar" style="width: 120px; height: 20px; background: #009494;"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="bar" style="width: 40px; height: 20px;  background: #009494;"></div>
                                 </div>
                             </div>
                             <h2>Reviews & Ratings</h2>
@@ -79,18 +123,28 @@
                                     </div>
                                 </div>
                                 <div class="col-md-8">
-                                    <span></span><strong>James S.</strong></span>
+                                    <span><strong>James S.</strong></span>
+                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
                                     <p><small>Cliche venmo lomo humblebrag, af VHS asymmetrical seitan literally try-hard waistcoat?</small></p>
                                 </div>
                             </div>
                             <div class="row" id="row3">
                                 <div class="col-md-2">
-                                    <div class="test rounded-circle" style="width: 50px; height: 50px; background: #8d8dff">
+                                    <div class="test rounded-circle" style="background: #8d8dff">
                                         CN
                                     </div>
                                 </div>
                                 <div class="col-md-8">
                                     <span><strong>Charles N.</strong></span>
+                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
                                     <p><small>Cliche venmo lomo humblebrag, af VHS asymmetrical seitan literally try-hard waistcoat?</small></p>
                                 </div>
                             </div>                            
@@ -103,12 +157,22 @@
                             </div>
                             <div class="col-md-8">
                                 <span><strong>Karina K.</strong></span>
+                                <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
                                 <p><small>Cliche venmo lomo humblebrag, af VHS asymmetrical seitan literally try-hard waistcoat?</small></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <button class="btn-info btn-block">$12.00 = ???</button>
+                        <span class="glyphicon glyphicon-star" style="color: #f09648;"></span> 
+                        <span class="glyphicon glyphicon-star" style="color: #f09648;"></span> 
+                        <span class="glyphicon glyphicon-star" style="color: #f09648;"></span> 
+                        <span class="glyphicon glyphicon-star" style="color: #f09648;"></span> 
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <button class="btn-info btn-block" >$12.00 = <i class="icon-large icon-search"></i></button>
                         <span>Item attributes</span>
                         <div class="row">
                             <div class="col-sm-4">
@@ -209,6 +273,6 @@
                     </div>
                 </div>
             </div>
-        </menu>
+        </main>
     </body>
 </html>

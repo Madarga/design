@@ -1,0 +1,29 @@
+header button{
+    width: 107px;
+    height: 40px;
+    border-radius: 6px;
+    background: #009494;
+    border: none;
+}
+
+#container-2 h1{
+    font-size: 800px;
+}
+
+main #btn-2{
+    width: 196px;
+    height: 57px;
+    border-radius: 6px;
+}
+
+main .post{
+   
+}
+
+.post .test{
+    width: 69px; 
+    height: 69px;
+    color: white;
+    text-align: center;
+}
+
