@@ -45,19 +45,16 @@ main .container{
     font-size: 55px;
 }
 
-.row p{
-    margin-top: -10px;
-    line-height: 15px;
-}
-
 main .row{
-    width:1000px;
+    width:995px;
     margin: 45px auto  0;
 }
 
-.card{
-    grid-column-gap: 1px;
-    width: 350px;
+main .col-auto{
+    border: 1px solid #BEBEBE;
+    border-radius: 5px 5px 5px 5px;
+    padding: 0;
+    width: 315px;
     height: 350px;
 }
 
@@ -73,63 +70,56 @@ main .row{
     float: right;
 }
 
-.card-title{
-    background: #F0F0F0;
-    width: 315.3px;
-    margin-left: -15px;
-    height: 50px;
-    padding-top: 12px;
-}
-
 main h2{
     font-size: 24px;
     text-align: center;
-    width: 100%;
+    background: #F0F0F0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-top: 12px;
+    width: 312px;
+    height: 55px;
+    
+}
+
+.row .text-center{
+    margin-top: 10px;
+    line-height: 5px;
 }
 
 main button{
-    margin-top: 22px;
+    margin-top: 25px;
+    margin-left: 22px;
     border-radius: 5px 5px 5px 5px;
     box-shadow: none;
+    width: 270px;
     font-size: 25px;
     height: 60px;
 }
 
 main #lead{
     width: 90px;
-    margin-top: 0px;
-    margin-left: 70px;
-    margin-bottom: 40px;
-    color: #202020;
+    margin-top: 3px;
+    margin-left: 80px;
+    color: #303030;
     font-size: 50px;
     font-weight: 400;
 }
 
-main #lead2{
-    width: 100px;
-    margin-top: -108px;
-    margin-left: 130px;
-    margin-bottom: 40px;
-    color: #696969;
-    font-size: 40px;
+main mark{
+    color:  #696969;
+    background: none;
+    font-size: 45px;
 }
 
 main #lead3{
     width: 90px;
     margin-top: 0px;
-    margin-left: 52px;
-    margin-bottom: 40px;
+    margin-left: 64px;
     color: #202020;
+    font-size: 50px; color: #303030;
     font-size: 50px;
-}
-
-main #lead4{
-    width: 100px;
-    margin-top: -108px;
-    margin-left: 140px;
-    margin-bottom: 40px;
-    color: #696969;
-    font-size: 40px;
+    font-weight: 400;
 }
 
  main #btn1{
@@ -179,19 +169,50 @@ ul li a{
 }
 
 @media screen and (max-width: 700px){
+    .col{
+        display: none;
+    }
+
+    header button{
+        margin-left: 380px;
+        margin-top: -65px;
+    }
+
+    .navbar{
+        height: 60px;
+    }
+
+    main .container{
+        width: 395px;
+    }
+
     main .row{
-
+        width: 350px;
     }
 
-    .row #card1{
-
+    #card1{
+        margin: auto;
     }
 
-    .row #card1{
-        margin-left: 180px;
+    #card2{
+        margin-top: 20px;
+        margin-right: auto;
     }
 
-    .row #card2{
-        margin: 400px auto 0;
+    #card3{
+        margin-top: 20px;
+    }
+
+    footer .container{
+        width: 200px;
+        text-align: center;
+    }
+
+    footer h3{
+        margin-left: 71px;
+    }
+
+    .logo-container{
+        margin-bottom: 20px;
     }
 }
