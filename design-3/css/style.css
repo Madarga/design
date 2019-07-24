@@ -1,29 +1,225 @@
-header button{
+.navbar{
+    height: 79px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+}
+
+header #search-bar{
+    height: 40px;
+    margin-left: 130px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #f0f0f0;
+}
+
+#search-1{
+    color: lightgray;
+}
+
+header input-1{
+    color: #f0f0f0;
+}
+
+header .navbar{
+    height: 79px;
+    padding-bottom: -10px;
+}
+
+header ul{
+}
+
+#navbarDropdown{
+    font-size: 14px;
+    color: #009494;
+}
+
+header .btn-info{
+    font-size: 14px;
+    color: #ffffff;
     width: 107px;
     height: 40px;
     border-radius: 6px;
+    margin-top: 8px;
+}
+
+main h1{
+    font-size: 24px;
+    letter-spacing: normal;
+    line-height: 1.21;
+    font-style: normal;
+    color: #0d1018;
+}
+
+main .img-fluid{
+    width: 768px;
+}
+
+main .text-left{
+    font-size: 16px;
+}
+
+main .dis2{
+    font-size: 14px;
+}
+
+main ul{
+    font-size: 18px;
+    margin-top: 50px;
+}
+
+main #stat{
+    margin-left: 0px;
+    margin-top: 30px;
+}
+
+main .active{
+    border-bottom: 2px solid #009494;
+    width: 35px;
+    height: 40px;
+    margin-left: 18px;
+}
+
+main .bar1{
+    width: 360px; 
+    height: 20px; 
     background: #009494;
-    border: none;
 }
 
-#container-2 h1{
-    font-size: 800px;
+main .bar2{
+    width: 280px; 
+    height: 20px; 
+    background: #009494;
 }
 
-main #btn-2{
-    width: 196px;
-    height: 57px;
-    border-radius: 6px;
+main .bar3{
+    width: 200px; 
+    height: 20px;  
+    background: #009494;
 }
 
-main .post{
-   
+#round1{
+    width: 69px; 
+    height: 69px; 
+    background: #eb5f5f;
 }
 
-.post .test{
+#round2{
     width: 69px; 
     height: 69px;
-    color: white;
-    text-align: center;
+    background: #8d8dff;
 }
+
+#round3{
+    width: 69px; 
+    height: 69px; 
+    background: #ebc05f;
+}
+
+#rr{
+    font-size: 14px;
+    margin-top: 39px;
+    width: 650px;
+}
+
+main .text-center{
+    padding-top: 22px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+p{
+    color: #707070;
+}
+
+/* Sidebar */
+main .btn-info{
+    height: 57px;
+    border-radius: 6px;
+    font-size: 24px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.46;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+main #cart{
+    font-size: 24px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.46;
+    letter-spacing: normal;
+    color: #000000;
+}
+
+main mark{
+    font-size: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+main #star{
+    color: #f09648;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: normal;
+}
+
+main h2{
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.22;
+    letter-spacing: normal;
+    color: #0d1018;
+    margin-left: 4px;
+}
+
+main .container{
+    
+}
+
+#sidebar{
+    
+}
+
+main #sidebar-2{
+    border-top: 2px solid #009494;
+}
+
+ #row5{
+    border-bottom: 2px solid #F0F0F0;
+}
+
+#row6{
+    width: 290px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-bottom: 25px;
+    margin-left: 0px;
+}
+
+main .col-sm-4{
+    height: 17px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #000000;
+    text-align: left;
+}
+
+main .col-sm-6{
+    font-size: 14px;
+    color: #707070;
+    padding-top: 2px;
+}
+
+main #foot{
+    color: #c1c1c1;
+}
+
+
 

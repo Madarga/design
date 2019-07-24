@@ -14,262 +14,274 @@
     </head>
     <body>
         <header>
-            <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand" href="#">Logo</a>
-                    <div class="collapse navbar-collapse navbar-nav row justify-content-end" id="navbarSupportedContent">
-                        <div class="row">
-                            <div class="col d-inline w-100">
-                                <form class="form-inline my-2 my-lg-0 d-inline w-100">
-                                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                                </form>
+            <div class="container pl-0 pr-0">
+                    <nav class="navbar navbar-expand-sm">
+                            <div class="d-flex w-50 order-0">
+                                <a class="navbar-brand mr-1" href="#">Logo</a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
                             </div>
-                            <div class="col row justify-content-between">
-                                <nav class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Category
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="input-group mb-3 mx-auto d-block text-center order-0 order-md-1 w-75" id="search-bar">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text bg-light">
+                                            <span class="glyphicon glyphicon-search" id="search-1"></span>
+                                        </div>
+                                        <input type="search" class="form-control mr-sm-2" id="input-1" ype="search" placeholder="Search" aria-label="Search">
                                     </div>
-                                </nav>
                             </div>
-                            <div class="col row justify-content-end">
-                                <button class="btn btn-info "><span class="glyphicon glyphicon-shopping-cart"></span>&nbspSign in</button>
+                            <div class="navbar-collapse collapse dual-nav w-50 order-2 pl-5 pr-0 mr-0">
+                                <ul class="nav navbar-nav ml-auto mr-0 float-right">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle mr-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Category
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button class="btn btn-info"><span class="glyphicon glyphicon-shopping-cart"></span>&nbspSign in</button>
+                                        </li>
+                                    </ul>
                             </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                </nav>
+                        </nav>
             </div>
         </header>
         <main>
-            <div class="container">
+            <div class="container pb-5">
                 <h1>Blog Dummy Theme Name</h1>
                 <div class="row">
-                    <div class="col-md-8 d-inline flex p-2">
-                        <img src="images/rob-bates-0eLg8OTuCw0-unsplash.jpg" class="img-fluid">
+                    <div class="col-md-7 pl-0">
+                        <img src="images/rob-bates-0eLg8OTuCw0-unsplash.jpg" class="img-fluid mt-lg-4">
                         <div class="post">
-                            <p class="text-left"><strong>Lorem ipsum</strong> dolor amet shoreditch raclette fingerstache knausgaard yr umami paleo wayfarers activated charcoal. Disrupt swag kickstarter literally shoreditch. Yuccie meditation listicle, cardigan live-edge locavore lyft irony plaid green juice pabst hot chicken. Cliche venmo lomo humblebrag, af VHS asymmetrical seitan literally try-hard waistcoat.</p>
+                            <p class="text-left mt-lg-5"><strong>Lorem ipsum</strong> dolor amet shoreditch raclette fingerstache knausgaard yr umami paleo wayfarers activated charcoal. Disrupt swag kickstarter literally shoreditch. Yuccie meditation listicle, cardigan live-edge locavore lyft irony plaid green juice pabst hot chicken. Cliche venmo lomo humblebrag, af VHS asymmetrical seitan literally try-hard waistcoat.</p>
                             <ul class="nav">
                                 <li class="nav-item">
-                                    <a class="nav-link disabled" href="#">Details</a>
+                                    <a class="nav-link disabled text-muted pl-0" id="dis1" href="#"><strong>Details</strong></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link disabled" href="#">Comments</a>
+                                    <a class="nav-link disabled text-muted" id="dis2" href="#"><strong>Comments</strong></a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Reviews</a>
+                                <li class="nav-item active" id="review">
+                                    <a class="nav-link text-dark pl-0" href="#"><strong>Reviews</strong></a>
                                 </li>
                             </ul>
-                            <div class="row d-inline flex p-2">
-                                <div class="col-md-8 ">
-                                    <h2>Statistics</h2>
+                            <div class="row inline-block flex pl-0" id="stat">
+                                <div class="col-4 pl-0">
+                                    <label><strong>Statistics</strong></label>
                                 </div>
-                                <div class="col-md-8 row justify-content-end">
-                                    <h2>Average Rating</h2>
-                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
-                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
-                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
-                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                <div class="col-8 text-right float-right">
+                                    <label>Average Rating</label>
+                                    <span class="glyphicon glyphicon-star" id="star"></span>
+                                    <span class="glyphicon glyphicon-star" id="star"></span>
+                                    <span class="glyphicon glyphicon-star" id="star"></span>
+                                    <span class="glyphicon glyphicon-star" id="star"></span>
                                     <span class="glyphicon glyphicon-star-empty"></span>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
-                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
-                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
-                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                            <div class="row mt-3">
+                                <div class="col-3 pr-0">
+                                    <span class="glyphicon glyphicon-star" id="star"></span>
+                                    <span class="glyphicon glyphicon-star" id="star"></span>
+                                    <span class="glyphicon glyphicon-star" id="star"></span>
+                                    <span class="glyphicon glyphicon-star" id="star"></span>
                                     <span class="glyphicon glyphicon-star-empty"></span>
                                 </div>
-                                <div class="col-md-8">
-                                    <div class="bar" style="width: 200px; height: 20px; background: #009494;"></div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
-                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
-                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="bar" style="width: 120px; height: 20px; background: #009494;"></div>
+                                <div class="col-md-8 pl-0">
+                                    <div class="bar1"></div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
+                            <div class="row mt-3">
+                                <div class="col-3 pr-0">
+                                    <span class="glyphicon glyphicon-star" id="star"></span>
+                                    <span class="glyphicon glyphicon-star" id="star"></span>
+                                    <span class="glyphicon glyphicon-star" id="star"></span>
                                     <span class="glyphicon glyphicon-star-empty"></span>
                                     <span class="glyphicon glyphicon-star-empty"></span>
                                 </div>
-                                <div class="col-md-8">
-                                    <div class="bar" style="width: 40px; height: 20px;  background: #009494;"></div>
+                                <div class="col-md-8 pl-0">
+                                    <div class="bar2"></div>
                                 </div>
                             </div>
-                            <h2>Reviews & Ratings</h2>
+                            <div class="row mt-3">
+                                <div class="col-3 pr-0">
+                                    <span class="glyphicon glyphicon-star" id="star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </div>
+                                <div class="col-md-8 pl-0">
+                                    <div class="bar3"></div>
+                                </div>
+                            </div>
+                            <label id="rr"><strong>Reviews & Ratings</strong></label>
                             <small><em>Only buyers of this product can rate it.</em></small>
-                            <div class="row" id="row2">
+                            <div class="row mt-5" id="row2">
                                 <div class="col-md-2">
-                                    <div class="test rounded-circle" style="width: 50px; height: 50px; background: #eb5f5f">
+                                    <div class="test rounded-circle text-center" id="round1">
                                         JS
                                     </div>
                                 </div>
-                                <div class="col-md-8">
+                                <div class="col pr-0">
                                     <span><strong>James S.</strong></span>
-                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
-                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
-                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
-                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star" id="star"></span>
+                                    <span class="glyphicon glyphicon-star" id="star"></span>
+                                    <span class="glyphicon glyphicon-star" id="star"></span>
+                                    <span class="glyphicon glyphicon-star" id="star"></span>
                                     <span class="glyphicon glyphicon-star-empty"></span>
                                     <p><small>Cliche venmo lomo humblebrag, af VHS asymmetrical seitan literally try-hard waistcoat?</small></p>
                                 </div>
                             </div>
-                            <div class="row" id="row3">
+                            <div class="row mt-5" id="row3">
                                 <div class="col-md-2">
-                                    <div class="test rounded-circle" style="background: #8d8dff">
+                                    <div class="test rounded-circle text-center" id="round2">
                                         CN
                                     </div>
                                 </div>
-                                <div class="col-md-8">
+                                <div class="col pr-0">
                                     <span><strong>Charles N.</strong></span>
-                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
-                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
-                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
-                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                    <span class="glyphicon glyphicon-star" id="star"></span>
+                                    <span class="glyphicon glyphicon-star" id="star"></span>
+                                    <span class="glyphicon glyphicon-star" id="star"></span>
+                                    <span class="glyphicon glyphicon-star" id="star"></span>
                                     <span class="glyphicon glyphicon-star-empty"></span>
                                     <p><small>Cliche venmo lomo humblebrag, af VHS asymmetrical seitan literally try-hard waistcoat?</small></p>
                                 </div>
                             </div>                            
                         </div>
-                        <div class="row" id="row4">
+                        <div class="row mt-5" id="row4">
                             <div class="col-md-2">
-                                <div class="test rounded-circle" style="width: 50px; height: 50px; background: #ebc05f">
+                                <div class="test rounded-circle text-center" id="round3">
                                     KK
                                 </div>
                             </div>
-                            <div class="col-md-8">
+                            <div class="col pr-0">
                                 <span><strong>Karina K.</strong></span>
-                                <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
-                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
-                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
-                                    <span class="glyphicon glyphicon-star" style="color: #f09648;"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star" id="star"></span>
+                                    <span class="glyphicon glyphicon-star" id="star"></span>
+                                    <span class="glyphicon glyphicon-star" id="star"></span>
                                     <span class="glyphicon glyphicon-star-empty"></span>
                                 <p><small>Cliche venmo lomo humblebrag, af VHS asymmetrical seitan literally try-hard waistcoat?</small></p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <span class="glyphicon glyphicon-star" style="color: #f09648;"></span> 
-                        <span class="glyphicon glyphicon-star" style="color: #f09648;"></span> 
-                        <span class="glyphicon glyphicon-star" style="color: #f09648;"></span> 
-                        <span class="glyphicon glyphicon-star" style="color: #f09648;"></span> 
+                    <div class="col-1"></div>
+                    <div class="col-4 mt-3 pl-0 pr-3" id="sidebar">
+                        <span class="glyphicon glyphicon-star" id="star"></span> 
+                        <span class="glyphicon glyphicon-star" id="star"></span> 
+                        <span class="glyphicon glyphicon-star" id="star"></span> 
+                        <span class="glyphicon glyphicon-star" id="star"></span> 
                         <span class="glyphicon glyphicon-star-empty"></span>
-                        <button class="btn-info btn-block" >$12.00 = <i class="icon-large icon-search"></i></button>
-                        <span>Item attributes</span>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                Version
+                        <div class="row mt-3 ml-0 mr-0 pr-0">
+                            <div class="col-sm-6 pl-0 pr-0">
+                                <button class="btn btn-info w-100">$12.00 = ???</i></button>
                             </div>
-                            <div class="col-sm-6">
-                                1.0
+                            <div class="col-sm-6 mt-3 pr-0 text-right" id="cart">
+                                <span class="glyphicon glyphicon-shopping-cart" id="cart2"><mark>23</mark></span>
                             </div>
+                        </div>                       
+                        <h2 class="mt-5">Item attributes</h2>
+                        <div class="col ml-0 mr-0" id="sidebar-2">
+                            <div class="row mt-3 pb-3" id="row5">
+                                <div class="col-sm-4 pl-0">
+                                    Version
+                                </div>
+                                <div class="col-sm-6">
+                                    1.0
+                                </div>
+                            </div>
+                            <div class="row" id="row5">
+                                <div class="col-sm-4 pl-0">
+                                    Type
+                                </div>
+                                <div class="col-sm-6">
+                                    HTML Template
+                                </div>
+                            </div>
+                            <div class="row mt-3 pb-3" id="row5">
+                                <div class="col-sm-4 pl-0">
+                                    Layouts
+                                </div>
+                                <div class="col-sm-6">
+                                    Responsive
+                                </div>
+                            </div>
+                            <div class="row mt-3 pb-3" id="row5">
+                                <div class="col-sm-4 pl-0">
+                                    Browsers
+                                </div>
+                                <div class="col-sm-6">
+                                    <span>IE 10, 11</span>
+                                    <span>Latest Chrome</span>
+                                    <span>Latest Edge</span>
+                                    <span>Latest Firefox</span>
+                                </div>  
+                            </div>
+                            <div class="row mt-3 pb-3" id="row5">
+                                <div class="col-sm-4 pl-0">
+                                    Uses Less
+                                </div>
+                                <div class="col-sm-6">
+                                    No
+                                </div>       
+                            </div>
+                            <div class="row mt-3 pb-3" id="row5">
+                                <div class="col-sm-4 pl-0">
+                                    Uses Sass
+                                </div>
+                                <div class="col-sm-6">
+                                    Yes
+                                </div>
+                            </div> 
+                            <div class="row mt-3 pb-3" id="row5">
+                                <div class="col-sm-4 pl-0">
+                                    Category
+                                </div>
+                                <div class="col-sm-6">
+                                    Blogs & Magazine
+                                </div>
+                            </div> 
+                            <div class="row mt-3 pb-3" id="row5">
+                                <div class="col-sm-4 pl-0">
+                                    Topic
+                                </div>
+                                <div class="col-sm-6">
+                                    General
+                                </div>
+                            </div> 
+                            <div class="row mt-3 pb-3" id="row5">
+                                <div class="col-sm-4 pl-0">
+                                    Labels
+                                </div>
+                                <div class="col-sm-6">
+                                    <span>blog, blog template</span>
+                                    <span>bootstrap 4, clean, lifestyles</span>
+                                    <span>modern</span>
+                                </div>
+                            </div>
+                            <div class="row mt-3 pb-3" id="row5">
+                                <div class="col-sm-4 pl-0">
+                                    Item#
+                                </div>
+                                <div class="col-sm-6">
+                                    13231
+                                </div>
+                            </div>
+                            <div class="row mt-3 pb-3" id="row5">
+                                <div class="col-sm-4 pl-0">
+                                    Released
+                                </div>
+                                <div class="col-sm-6">
+                                    3 months ago
+                                </div>
+                            </div>
+                            <div class="col ml-0 mr-0 pl-0 pr-0 h-5 d-inline" id="foot">
+                                <small>Want a customized theme?<a class="nav-link d-inline" href="#">Visit Swiftkind.</a></small>
+                            </div> 
                         </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                Type
-                            </div>
-                            <div class="col-sm-6">
-                                HTML Template
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                Layouts
-                            </div>
-                            <div class="col-sm-6">
-                                Responsive
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                Browsers
-                            </div>
-                            <div class="col-sm-6">
-                                <span>IE 10, 11</span>
-                                <span>Latest Chrome</span>
-                                <span>Latest Edge</span>
-                                <span>Latest Firefox</span>
-                            </div>  
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                Uses Less
-                            </div>
-                            <div class="col-sm-6">
-                                No
-                            </div>       
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                Uses Sass
-                            </div>
-                            <div class="col-sm-6">
-                                Yes
-                            </div>
-                        </div> 
-                        <div class="row">
-                            <div class="col-sm-4">
-                                Category
-                            </div>
-                            <div class="col-sm-6">
-                                Blogs & Magazine
-                            </div>
-                        </div> 
-                        <div class="row">
-                            <div class="col-sm-4">
-                                Topic
-                            </div>
-                            <div class="col-sm-6">
-                                General
-                            </div>
-                        </div> 
-                        <div class="row">
-                            <div class="col-sm-4">
-                                Labels
-                            </div>
-                            <div class="col-sm-6">
-                                <span>blog, blog template</span>
-                                <span>bootstrap 4, clean, lifestyles</span>
-                                <span>modern</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                Item#
-                            </div>
-                            <div class="col-sm-6">
-                                13231
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                Released
-                            </div>
-                            <div class="col-sm-6">
-                                3 months ago
-                            </div>
-                        </div>
-                        <small>
-                            Want a customized theme?<a class="nav-link" href="#">Visit Swiftkind.</a>
-                        </small> 
+                        
                     </div>
                 </div>
             </div>
