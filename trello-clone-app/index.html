@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <!-- script src="node_modules/jquery-ui/external/jquery/jquery.js"></script> -->
+</html>
+<body>
+    <header>
+        <div class="container">
+            <form class="form-inline mt-5">
+                <input type="text" class="form-control mr-sm-2 mb-2 mb-sm-0" id="your-list" placeholder="Your List">
+                <button type="button" class="btn btn-primary mt-2 mt-sm-0" id="add-btn">Add</button>
+            </form>
+        </div>
+        
+    </header>
+    <main>
+        <div class="container-2">
+
+        </div>
+    </main>
+
+    <script>
+        'use strict'
+
+        var counter = 1;
+
+        $(document).ready(function(){
+            var addBtn = $("#add-btn");
+
+            $(addBtn).click(function(){
+                var ylist = $("#your-list").val();
+
+                if(ylist == ''){
+                    alert('Insert List!');
+                }else{
+                    createListTemplate(ylist);
+                    ylist = $('#your-list').val('');
+                }
+            });
+
+            function createListTemplate(title){
+                var title;
+                var listTemplate;
+
+                listTemplate = $(".container-2").append('<div class="card" id="parent-card'+ counter +'"><div class="card-body" id="child-card1'+ counter +'"><button type="button" class="close" id="closebtn'+ counter +'" aria-label="Close">x</button><h5 class="card-title" id="titlecard'+ counter +'">'+ title +'</h5><button type="button" class="btn btn-info" id="addCardBtn'+ counter +'">Add Card</button></div></div>')
+                
+                //var listcard = $('<div class="card-text" id="cardlist'+ counter +'">CARD</div>');
+                //ar listcard = $('<input type="text" id="cardlist'+ counter +'"placeholder="Insert Card Name" class="card-text">');
+
+                //$('#addCardBtn' + counter).click(function(){
+                //    $('#parent-card').append(listcard.insertAfter('#titlecard' + counter));
+                //});
+
+
+                //listTemplate = $("#container-2").append('<div class="card" id="parent-card'+ counter +'"><div class="card-body" id="child-card1'+ counter +'"><h5 class="card-title">'+ title +'</h5></div></div>')
+
+
+                $('#addCardBtn' + counter).click(function(){
+                    var addCard = document.createElement("input");
+                    addCard.placeholder = "Insert Card Name";
+                    addCard.type = "text";
+                    addCard.className = "card-text";
+
+                    //$('.container-2').append(addCard);
+                    //$('.card' + counter).append(addCard); //pagdunggag og counter kay dile siya mugana....
+                    //pero dapat butngan og counter para magiterate siya kung which parent element ang sudlan niya 
+                    //$(addCard).wrap('#parent-card');
+
+                    $(listTemplate).append('<input type="text" id="cardlist'+ counter +'" placeholder="Insert Card Name" class="cardtext">');
+                });
+
+                $('#closebtn' + counter).click(function(){
+                    $(this).parent().remove();
+                });
+
+                counter++;
+            };
+        });
+    </script>
+</body>
+
