@@ -5,80 +5,80 @@
 
     <!-- Plug-ins -->
     <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="node_modules/jquery/dist/jquery.js"></script>
 </html>
 <body>
     <div class="container">
-        <nav class="navbar navbar-expand-sm">
-            <div class="form-group">
+        <nav class="navbar navbar-expand-sm d-flex justify-content-center">
+            <div class="form-group d-flex block mt-2">
                 <form role="form">
-                    <input type="text" class="form-control" placeholder="Enter todos" name="todo" id="todo">
+                    <input type="text" class="form-control h-100" placeholder="Enter todos" name="todo" id="todo" required>
                 </form>
-                <button type="button" class="btn btn-primary" id="add-btn">Add</button>
+                <button type="button" class="btn btn-primary ml-2 w-50" id="add-btn">Add</button>
             </div>
         </nav>
-        <div class="container-2">
+        <div class="container w-100 mt-5" id="container-2">
     
         </div>
-        
     </div>
+    
+    
 
     <script>
         'use strict'
 
-        var todolist = [];
-        var todoTemplate = [];
+        var counter = 1;
+
         $(document).ready(function(){
             var addBtn = $("#add-btn");
 
             $(addBtn).click(function(){
                 var todo = $("#todo").val();
+
+                if(todo == ''){
+                    alert('Insert to do!');
+                }else{
+                    addTemplate(todo);
+                    todo=$('#todo').val('');
+                }
                 
-                addTemplate(todo);
-                todolist.push(todo)
-                todo=$('#todo').val('');
-                console.log(todolist);
             });
 
-            var addTemplate = function(title){
+            function addTemplate(title){
                 var title;
-                let template = '<li class="list-unstyled"><input type="radio" class="radio-btn">'+title+'<button type="button" class="editBtn">Edit</button><button type="button" class="deleteBtn">Delete</button> </li>'
-                todoTemplate.push(template);
-                $
-                $('.container-2').append(template);
-                //$greetingOptions.append($('<input type="radio" name="greetings" value="' + i + '" checked>' + arrayValues[i] + '</input><br />'));
-                //for (var i=0; i<todolist.length; i++){
-                //    if(i === 0){
-                //        $('.container-2').append('<input type="radio" name="radiobuttons" value="'+ i + '" checked>' + todolist[i] + '</input><br />');
-                //    }else{
-                //        console.log('niagi siya')
-                //    $('.container-2').append('<input type="radio" name="radiobuttons" value="'+ i + '" checked>' + todolist[i] + '</input><br />');
-                //    }
+                var template;
+
+                template = $("#container-2").append('<li id="hover-ele'+ counter +'" class="list-unstyled border-bottom"><input type="radio" id="radio'+ counter +'"value="Radio">&nbsp<span>' + title + '&nbsp</span>'+'&nbsp<button type="button" class="delete btn btn-danger float-right" id="delete'+counter+'"value="Delete">Delete</button>&nbsp<button type="button" class="btn btn-info float-right mr-2" id="edit'+ counter +'"value="Edit">Edit</button>'+'</li>');
+
+                $('#hover-ele' + counter).mouseover(function(){
+                    $(this).find('button').css("visibility","visible");
+                });
+
+                $('#hover-ele' + counter).mouseout(function(){
+                    $(this).find('button').css("visibility","hidden");
+                });
+
+                $('#edit' + counter).click(function(){
+                    $(this).prev().prev().attr('contenteditable', 'true');
+                    $(this).prev().prev().focus();
+
+
+                });
+
+                $('#delete' + counter).click(function(){
+                    $(this).parent().remove();
+                });
+
+                $('#radio' + counter).click(function(){
+                    $(this).next().css({"text-decoration": "line-through", "color":"#696969"});
                     
-                //}
-                
-
-                //    alert($('.container-2 input:radio:checked').val());
-                    //alert($('.container-2 input:radio:checked')[0].nextSibling);
-                
-                $('input[name=radioButton]:checked');
-
-                $('.radio-btn').click(function(){
-                    console.log("gana siya");
                 });
 
-                $('.editBtn').click(function(){
-                    console.log("Gana Siya!");
-                });
+                counter++;
 
-                $('.deleteBtn').click(function(){
-                    for(var i=0; i<todoTemplate/length; i++){
-                        todoTemplate[i].remove();
-                    }
-
-                    console.log(todoTemplate[i]);
-                });
-            }
+                $()
+            };
                 
         });
         

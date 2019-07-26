@@ -1,0 +1,36 @@
+li:hover{
+    background:#F0F0F0;
+}
+
+.hover2{
+    background:#F0F0F0; !important
+}
+
+li{
+    
+    font-size: 20px;
+    padding: 12px;
+}
+
+li.checked{
+    text-decoration: line-through;
+}
+
+input{
+
+}
+
+.container{
+    margin-top: 40px;
+}
+
+form{
+    height: 50px;
+    width: 500px;
+}
+
+li button{
+    visibility: hidden;
+}
+
+
