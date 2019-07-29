@@ -3,9 +3,40 @@ div{
 }
 
 .card{
-    width: 200px;
+    width: 250px;
 }
 
 h5{
     /* border: 1px solid yellow; */
+}
+
+.modal-content{
+    border: 1px solid black;
+}
+
+[contenteditable=true]:empty:before{
+    content: attr(placeholder);
+}
+
+input{
+    border: none;
+}
+
+input br{
+    display: none;
+}
+
+#myModal .modal-backdrop
+{
+
+    background-color: gray;
+    opacity:0.5 !important;
+}
+
+.modal-fade{
+    background-color: gray;
+}
+
+textarea{
+    overflow: hidden;
 }
