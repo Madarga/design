@@ -1,42 +1,93 @@
-div{
-    /* border: 1px solid black; */
+.oversort {
+    white-space: nowrap; 
 }
 
-.card{
-    width: 250px;
+.card {
+    vertical-align: top; 
+    margin: 20px; 
+    margin-left: 5px; 
+    margin-right: 5px; 
+    background:#C0C0C0; 
+    width: 252px; 
+    min-height: 25px;
 }
 
-h5{
-    /* border: 1px solid yellow; */
+.card .header { 
+    min-width: 240px;
+    margin: 5px; 
+    padding: 5px; 
 }
 
-.modal-content{
-    border: 1px solid black;
+.card  div { 
+    min-width: 240px; 
+    margin: 5px; 
+    padding: 6px; 
+    font-size: 16px; 
+    width: 120px; 
+    background: #fefefe;
 }
 
-[contenteditable=true]:empty:before{
-    content: attr(placeholder);
+.addlist { 
+    min-width: 240px; 
+    margin: 5px; 
+    padding: 5px; 
+    font-size: 16px; 
+    width: 120px; 
+    border: 1px solid #fefefe; 
+    background: #fafafa; 
+    color: #484848;
 }
 
-input{
-    border: none;
+.newlist { 
+    margin-left: 10px; 
+    min-width: 230px; 
+    padding: 5px; 
+    font-size: 16px; 
+    width: 200px; 
+    border: 1px solid #8e8e8e; 
+    background: #fafafa; 
+    color: #484848;
 }
 
-input br{
-    display: none;
+li{
+    display: inline-block;
 }
 
-#myModal .modal-backdrop
-{
-
-    background-color: gray;
-    opacity:0.5 !important;
+.glyphicon{
+    font-size: 14px;
+   
 }
 
-.modal-fade{
-    background-color: gray;
+.modalbtn{
+    padding: 0;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    background: green;
 }
 
-textarea{
-    overflow: hidden;
+#deleteCard{
+
+}
+
+.closeCard{
+    background: none;
+}
+
+.insertedcard{
+    padding: 0;
+}
+
+#exampleFormControlTextarea1{
+    height: 300px;
+}
+
+.modal-dialog-centered{
+    width: 500px;
+}
+
+.insertedcard{
+    color: #484848;
+    padding: 0;
+    height: 35px;
 }
