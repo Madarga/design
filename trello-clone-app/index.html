@@ -1,11 +1,20 @@
+<!--
+Fix:
+    * sortable elements is not clickable (according to what I've read, current version of 
+      jquery-ui can't click sortable elements). To edit card title, trigger event inside
+      the modal
+    * 'append' will literally append all the values inside the array. to avoid this, pull
+      first the specified value from the array before appending it to the modal.
+    * 
+
+-->
 <!DOCTYPE html>
 <html lang="en">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="node_modules/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="jquery.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -17,20 +26,28 @@
         <div class="modal-dialog-centered mx-auto">
             <div class="modal-content w-100">
                 <div class="modal-header bg-warning">
-                    <h2 class="modal-title text-white" id="modaltitle"></h2>
+                    <button class="editbutton btn-lg pt-0 ml-0 mr-1" id="editbtn"><span class="glyphicon glyphicon-pencil mt-2 text-white"></span></button>
+                    <h2 class="mtitle modal-title text-white" id="modaltitle"></h2>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Description</label>
-                        <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="10"></textarea>
+                        <textarea class="form-control rounded-0" id="des" rows="10"></textarea>
+                        <button type="button" id="desbtn" class="desaddbtn btn bg-warning mt-2">Add</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="oversort">
-        <input type="text" class="newlist" name="newlistcard" placeholder="+ Add New List" />
-	</div>
+    <header>
+        <div class="container ml-0">
+            <input type="text" class="newlist" name="newlistcard" id="list" placeholder="+ Add New List" />
+        </div>
+    </header>
+    <main>
+        <div class="container-2 ml-5">
+            
+        </div>
+    </main>
 </body>
-

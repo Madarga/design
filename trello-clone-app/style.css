@@ -1,38 +1,17 @@
-.oversort {
-    white-space: nowrap; 
-}
-
-.card {
-    vertical-align: top; 
-    margin: 20px; 
-    margin-left: 5px; 
-    margin-right: 5px; 
-    background:#C0C0C0; 
+.card { 
     width: 252px; 
-    min-height: 25px;
-}
-
-.card .header { 
-    min-width: 240px;
-    margin: 5px; 
-    padding: 5px; 
 }
 
 .card  div { 
-    min-width: 240px; 
-    margin: 5px; 
-    padding: 6px; 
+    margin-top: 5px;
+    padding: 5px;
     font-size: 16px; 
-    width: 120px; 
+    width: 240px; 
     background: #fefefe;
 }
 
 .addlist { 
-    min-width: 240px; 
-    margin: 5px; 
-    padding: 5px; 
     font-size: 16px; 
-    width: 120px; 
     border: 1px solid #fefefe; 
     background: #fafafa; 
     color: #484848;
@@ -40,10 +19,9 @@
 
 .newlist { 
     margin-left: 10px; 
-    min-width: 230px; 
     padding: 5px; 
     font-size: 16px; 
-    width: 200px; 
+    width: 240px; 
     border: 1px solid #8e8e8e; 
     background: #fafafa; 
     color: #484848;
@@ -56,6 +34,16 @@ li{
 .glyphicon{
     font-size: 14px;
    
+}
+
+#editbtn{
+    font-size: 30px;
+    color: white;
+}
+
+.editbutton{
+    background: none;
+    border: none;
 }
 
 .modalbtn{
@@ -90,4 +78,8 @@ li{
     color: #484848;
     padding: 0;
     height: 35px;
+}
+
+.card-title{
+    
 }
