@@ -28,8 +28,6 @@ function addCard(){
                 var cardTitleArray = [];
                 var desArray = [];
                 cardTitleArray.push(cardTitle);
-
-                var json = {}
                 
                 for(var i=0; i<cardTitleArray.length; i++){
                     $(this).before('<div class="insertedcard d-flex" id="cardId'+ i +'"><span id="cardspanid'+ i +'" class="cardspan mr-auto p-2 w-100">' + cardTitleArray[i] + '</span><button class="close btn btn-sm ml-1 mr-0" id="modalbutton'+ i +'"><span class="glyphicon glyphicon-list-alt"></span></button><button type="button" class="close btn-sm ml-2" id="deleteCard"><span class="glyphicon glyphicon-trash"></span></button></div>');
@@ -38,23 +36,18 @@ function addCard(){
 
                     $('#modaltitle').text(cardTitleArray[i]);
 
-                    //$('#modaltitle').text(cardTitleArray[i]);   //idisplay niya ng last value
+            
                     $('.close#modalbutton' + i).click(function(){
                         $("#myModal").modal('show');
                         
-                         //murag tama man ni naevent, dile lang gyud siya magappend
+                        $('#modaltitle').text(cardTitleArray[i]); //murag tama man ni naevent, dile lang gyud siya magappend
 
-                        //$('.desaddbtn').click(function(){
-                        //    var description = $('#des').val();
-                        //    desArray.push($('#des').val());
-                        //    console.log(desArray[i]);
-                        //});
+                        $('.desaddbtn').click(function(){
+                            var description = $('#des').val();
+                            desArray.push($('#des').val());
+                            console.log(desArray[i]);
+                        });
                     });
-
-                    $('#myModal').on('shown.bs.modal', function(){
-                        
-                    });
-
 
                     cardTitle = $(this).val('');
                 }
@@ -119,11 +112,6 @@ function openModal(){
         Description();
         counter++;
     });
-    
-}
-
-        
-function addDescription(){
     
 }
 
