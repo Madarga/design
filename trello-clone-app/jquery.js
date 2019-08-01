@@ -13,7 +13,7 @@ function sortCard(){
 function deleteList(){
 	$('.close#closecard').click(function(){
 		console.log("Delete List");
-		$(this).parentsUntil($('.container')).remove();
+		$(this).parentsUntil($('.container-fluid')).remove();
 	});
 }
 
@@ -26,26 +26,34 @@ function addCard(){
                 alert("Enter Card Name!");
             }else{
                 var cardTitleArray = [];
+                var desArray = [];
                 cardTitleArray.push(cardTitle);
-                $(this).before('<div class="insertedcard"><span class="cardspan">' + cardTitleArray + '</span><button type="button" class="close btn-sm" id="deleteCard"><span class="glyphicon glyphicon-trash"></span></button><button class="close btn btn-sm float-right mr-2" id="modalbutton"><span class="glyphicon glyphicon-list-alt"></span></button></div>');
 
-                //jQuery.each(cardTitleArray, function(i, val){
-                //    var arraylist = cardTitleArray.slice(counter);
-                //    $('#modaltitle').append(arraylist);
-                //    val = '';
-                //});
+                var json = {}
+                
+                for(var i=0; i<cardTitleArray.length; i++){
+                    $(this).before('<div class="insertedcard d-flex" id="cardId'+ i +'"><span id="cardspanid'+ i +'" class="cardspan mr-auto p-2 w-100">' + cardTitleArray[i] + '</span><button class="close btn btn-sm ml-1 mr-0" id="modalbutton'+ i +'"><span class="glyphicon glyphicon-list-alt"></span></button><button type="button" class="close btn-sm ml-2" id="deleteCard"><span class="glyphicon glyphicon-trash"></span></button></div>');
+                    
+                    console.log(cardTitleArray[i]);
 
-                cardTitleArray.forEach(myFunction)
+                        $('.close#modalbutton' + i).click(function(){
+                            $("#myModal").modal('show');
+                            $('#modaltitle').text(cardTitleArray[i]); //murag tama man ni naevent, dile lang gyud siya magappend
+                        });
+    
+    
+                        $('.desaddbtn').click(function(){
+                            var description = $('#des').val();
+                            desArray.push($('#des').val());
+                            console.log(desArray[i]);
+                        });
 
-                function myFunction(item, index, arr){
-                    $('#modaltitle').append(arr[index]);
+                        cardTitle = $(this).val('');
+                    
                 }
-
-                console.log($('.cardspan').val());
 
                 deleteList();
                 deleteCard();
-                openModal();
                 sortCard();
                 editCardTitle();
                 addDescription();
@@ -56,6 +64,13 @@ function addCard(){
 		}
 	});
 }
+
+
+function getDescription(){
+    var getd = $('#des').text();
+    console.log(getd);
+}
+
 
 function editListTitle(){
     $('.ltitle').click(function(event){ 
@@ -71,6 +86,7 @@ function editListTitle(){
     });
 }
 
+
 function editCardTitle(){
     $('.cardspan').on('click', 'span', function(event){
         event.stopPropagation();
@@ -80,6 +96,7 @@ function editCardTitle(){
     });
 }
 
+
 function deleteCard(){
 	$('.close#deleteCard').click(function(){
 		console.log("Delete Card");
@@ -87,20 +104,22 @@ function deleteCard(){
 	});
 }
 
+
 function openModal(){
-	$('.close#modalbutton').click(function(){
-		console.log("Modal Button");
-		$("#myModal").modal('show');
-		$('#modaltitle')
-	});
+	$('.close#modalbutton' + counter).click(function(){
+        console.log("Modal Button");
+        $("#myModal").modal('show');
+        Description();
+        counter++;
+    });
+    
 }
+
         
 function addDescription(){
-    $('.desaddbtn').click(function(){
-        var description = $('#des').val();
-        console.log($('#des').val());
-    });
+    
 }
+
 
 $(document).ready(function () {
     addCard();
@@ -117,7 +136,7 @@ $(document).ready(function () {
                 alert('Enter List Name!');
             }
             else {
-                $('container-2').append($(this).after('<div class="card bg-warning p-2 mt-5"><div class="card-title bg-warning pt-0 pb-0 d-flex justify-content-between"><h3 class="ltitle text-white">' + listTitle + '</h3><button type="button" class="close float-right" id="closecard">x</button></div><li class="list-unstyled"><input type="text" class="addlist mt-3 p-2 w-100" name="addlist" id="addcard" placeholder="+ New Card" /></li></div>'));
+                $('container-2').append($(this).after('<div class="card bg-warning p-2 mt-5 mr-5"><div class="card-title bg-warning pt-0 pb-0 d-flex justify-content-between"><h3 class="ltitle text-white">' + listTitle + '</h3><button type="button" class="close float-right" id="closecard">x</button></div><li class="list-unstyled"><input type="text" class="addlist mt-3 p-2 w-100" name="addlist" id="addcard" placeholder="+ New Card" /></li></div>'));
                 listTitle = $(this).val('');
                 addCard();
                 deleteList();
@@ -129,7 +148,7 @@ $(document).ready(function () {
                         event.isImmediatePropagationStopped();
                     }
                 });
-                editListTitle();
+                editListTitle();;
             }
         }
     });
