@@ -36,20 +36,27 @@ function addCard(){
                     
                     console.log(cardTitleArray[i]);
 
-                        $('.close#modalbutton' + i).click(function(){
-                            $("#myModal").modal('show');
-                            $('#modaltitle').text(cardTitleArray[i]); //murag tama man ni naevent, dile lang gyud siya magappend
-                        });
-    
-    
-                        $('.desaddbtn').click(function(){
-                            var description = $('#des').val();
-                            desArray.push($('#des').val());
-                            console.log(desArray[i]);
-                        });
+                    $('#modaltitle').text(cardTitleArray[i]);
 
-                        cardTitle = $(this).val('');
-                    
+                    //$('#modaltitle').text(cardTitleArray[i]);   //idisplay niya ng last value
+                    $('.close#modalbutton' + i).click(function(){
+                        $("#myModal").modal('show');
+                        
+                         //murag tama man ni naevent, dile lang gyud siya magappend
+
+                        //$('.desaddbtn').click(function(){
+                        //    var description = $('#des').val();
+                        //    desArray.push($('#des').val());
+                        //    console.log(desArray[i]);
+                        //});
+                    });
+
+                    $('#myModal').on('shown.bs.modal', function(){
+                        
+                    });
+
+
+                    cardTitle = $(this).val('');
                 }
 
                 deleteList();
