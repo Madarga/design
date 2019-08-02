@@ -106,24 +106,6 @@ function editCardTitle(){
     });
 }
 
-//<input type="text" class="editedtitle" value="${cardTitle}" name="title"/>
-            //$('.insertedcard').on('click', function(){
-            //    console.log('test');
-            //    var editCard = $(this).addClass('edit');
-                
-            //    console.log(editCard);
-
-            //    $(editCard).keypress(function(event){
-            //        if(event.keyCode == '13'){
-            //            console.log($('.editedtitle').text());
-            //            var editedValue = $(editCard).text($('.editedtitle').val());
-            //            console.log(editedValue);
-                        
-            //        }
-            //    });
-            //});
-
-
 
 function deleteCard(){
 	$('.close#deleteCard').click(function(){
