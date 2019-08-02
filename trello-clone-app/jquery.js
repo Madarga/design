@@ -46,24 +46,31 @@ function addCard(){
                             editCard = $(this).val();
                             $(this).blur();
                             console.log(editCard);
-                            cardTitle = editCard;
-                            console.log(cardTitle);
-                            $('.cardspan').replaceWith(cardTitle);
-                            //editCard.replace(cardTitle);
+                            cardTitle.replace(cardTitle, editCard);
+                            editCard.replace(cardTitle);
                             console.log(cardTitle);
                             $(this).css('display', 'none');
                             //$('.insertedcard').find('span');
-                        }
+                        } //disable the button children from being clicked if parent element is being clicked
                     });
                 });
-
             }
+
+            //line 29 <input type="text" class="editedtitle" value="${cardTitle}" name="title"/>
+
+            //kwaon ang value na
+            //
+            //
             
             deleteCard();
             sortCard();
             openModal();
                     
             cardTitle = $(this).val('');
+            // counter++;
+
+            
+            
 		}
 	});
 }
@@ -105,6 +112,24 @@ function editCardTitle(){
 
     });
 }
+
+//<input type="text" class="editedtitle" value="${cardTitle}" name="title"/>
+            //$('.insertedcard').on('click', function(){
+            //    console.log('test');
+            //    var editCard = $(this).addClass('edit');
+                
+            //    console.log(editCard);
+
+            //    $(editCard).keypress(function(event){
+            //        if(event.keyCode == '13'){
+            //            console.log($('.editedtitle').text());
+            //            var editedValue = $(editCard).text($('.editedtitle').val());
+            //            console.log(editedValue);
+                        
+            //        }
+            //    });
+            //});
+
 
 
 function deleteCard(){
