@@ -74,11 +74,12 @@ function getDescription(){
 
 function editListTitle(){
     $('.ltitle').click(function(event){ 
-        $(this).attr('contenteditable', 'true');
+        var editedlist = $(this).attr('contenteditable', 'true');
         $(this).attr('focus');
 
         $('.ltitle[contenteditable]').keypress(function(event){
             if(event.keyCode == "13"){
+                $(editedlist).blur();
                 return false;
                 event.isImmediatePropagationStopped();
             }
