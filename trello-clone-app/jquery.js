@@ -1,17 +1,16 @@
 'use strict'
         
-var counter = 0;
 
 function sortCard(){
     var last = $("li").last();
-	$("li").sortable({
-        connectWith: "li",
+	//$("li").sortable({
+    //    connectWith: "li",
         //cancel: last
-    });
+    //});
 }
         
 function deleteList(){
-	$('.close#closecard').click(function(){
+	$('#closecard').click(function(){
 		console.log("Delete List");
 		$(this).parentsUntil($('.container-fluid')).remove();
 	});
@@ -21,58 +20,57 @@ function addCard(){
 	$('#addcard').keypress(function(event){
 		if(event.keyCode == "13"){
 			var cardTitle = $(this).val();
-
             if(cardTitle == ''){
                 alert("Enter Card Name!");
             }else{
-                var cardTitleArray = [];
-                var desArray = [];
-                cardTitleArray.push(cardTitle);
+                var cardTpl = `
+                <div class="insertedcard d-flex" id="">
+                <span class="cardspan mr-auto p-2 w-100">${cardTitle}</span>
+                <input type="text" class="editedtitle" value="${cardTitle}" name="title"/>
+                <button class="btn-card-link close btn btn-sm ml-1 mr-0" data-title="${cardTitle}">
+                <span class="glyphicon glyphicon-list-alt"></span></button>
+                <button type="button" class="close btn-sm ml-2" id="deleteCard">
+                <span class="glyphicon glyphicon-trash"></span></button></div>
+                `;
                 
-                for(var i=0; i<cardTitleArray.length; i++){
-                    $(this).before('<div class="insertedcard d-flex" id="cardId'+ i +'"><span id="cardspanid'+ i +'" class="cardspan mr-auto p-2 w-100">' + cardTitleArray[i] + '</span><button class="close btn btn-sm ml-1 mr-0" id="modalbutton'+ i +'"><span class="glyphicon glyphicon-list-alt"></span></button><button type="button" class="close btn-sm ml-2" id="deleteCard"><span class="glyphicon glyphicon-trash"></span></button></div>');
+                $(this).before(cardTpl)
+
+                $('.insertedcard').on('click', function(){
+                    console.log('test');
+                    var editCard = $(this).addClass('edit').text();
                     
-                    console.log(cardTitleArray[i]);
-
-                    $('#modaltitle').text(cardTitleArray[i]);
-
-            
-                    $('.close#modalbutton' + i).click(function(){
-                        $("#myModal").modal('show');
-                        
-                        $('#modaltitle').text(cardTitleArray[i]); //murag tama man ni naevent, dile lang gyud siya magappend
-
-                        $('.desaddbtn').click(function(){
-                            var description = $('#des').val();
-                            desArray.push($('#des').val());
-                            console.log(desArray[i]);
-                        });
+                    console.log(editCard);
+    
+                    $('.editedtitle').keypress(function(event){
+                        if(event.keyCode == '13'){
+                            editCard = $(this).val();
+                            $(this).blur();
+                            console.log(editCard);
+                            cardTitle = editCard;
+                            console.log(cardTitle);
+                            $('.cardspan').replaceWith(cardTitle);
+                            //editCard.replace(cardTitle);
+                            console.log(cardTitle);
+                            $(this).css('display', 'none');
+                            //$('.insertedcard').find('span');
+                        }
                     });
+                });
 
-                    cardTitle = $(this).val('');
-                }
-
-                deleteList();
-                deleteCard();
-                sortCard();
-                editCardTitle();
-                addDescription();
-                        
-                cardTitle = $(this).val('');
-                counter++;
             }
+            
+            deleteCard();
+            sortCard();
+            openModal();
+                    
+            cardTitle = $(this).val('');
 		}
 	});
 }
 
 
-function getDescription(){
-    var getd = $('#des').text();
-    console.log(getd);
-}
-
-
 function editListTitle(){
+    console.log('edit list.....');
     $('.ltitle').click(function(event){ 
         var editedlist = $(this).attr('contenteditable', 'true');
         $(this).attr('focus');
@@ -80,40 +78,68 @@ function editListTitle(){
         $('.ltitle[contenteditable]').keypress(function(event){
             if(event.keyCode == "13"){
                 $(editedlist).blur();
-                return false;
+                console.log('edit sdf.....');
                 event.isImmediatePropagationStopped();
+                return false;
+
             }
         });
     });
 }
 
 
+//function editCardTitle(){
+//    $('.cardspan').on('click', function(event){
+        //event.stopPropagation();
+//        console.log("Edit Card!");
+ //       $('#this').attr('contenteditable', 'true');
+   //     $('#this').attr('focus');
+     //   console.log("Edit Card Title");
+    //});
+//}
+
 function editCardTitle(){
-    $('.cardspan').on('click', 'span', function(event){
-        event.stopPropagation();
-        $('#this').attr('contenteditable', 'true');
-        $('#this').attr('focus');
-        console.log("Edit Card Title");
+    $('.cardspan').on('click', function(){
+        var editCard = $(this).addClass('edit');
+
+
     });
 }
+
+//<input type="text" class="editedtitle" value="${cardTitle}" name="title"/>
+            //$('.insertedcard').on('click', function(){
+            //    console.log('test');
+            //    var editCard = $(this).addClass('edit');
+                
+            //    console.log(editCard);
+
+            //    $(editCard).keypress(function(event){
+            //        if(event.keyCode == '13'){
+            //            console.log($('.editedtitle').text());
+            //            var editedValue = $(editCard).text($('.editedtitle').val());
+            //            console.log(editedValue);
+                        
+            //        }
+            //    });
+            //});
+
 
 
 function deleteCard(){
 	$('.close#deleteCard').click(function(){
 		console.log("Delete Card");
-		$(this).parentsUntil($('li')).remove();
+		$(this).parentsUntil('li').remove();
 	});
 }
 
 
 function openModal(){
-	$('.close#modalbutton' + counter).click(function(){
-        console.log("Modal Button");
+	$(".btn-card-link").click(function(){
         $("#myModal").modal('show');
-        Description();
-        counter++;
+        var title= $(this).data('title');
+        console.log(title);
+        $('#modaltitle').text(title);
     });
-    
 }
 
 
@@ -139,13 +165,10 @@ $(document).ready(function () {
                 deleteCard();
                 openModal();
                 sortCard();
-                $('#list').keypress(function (event) {
-                    if (event.keyCode == "13") {
-                        event.isImmediatePropagationStopped();
-                    }
-                });
                 editListTitle();;
             }
         }
     });
+
+
 });
