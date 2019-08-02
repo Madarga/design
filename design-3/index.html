@@ -6,7 +6,6 @@
 
         <!-- Bootstrap -->
         <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
-        
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="node_modules/bootstrap/node_modules/font-awesome/css/font-awesome.css">
@@ -14,40 +13,35 @@
     <body>
         <header>
             <div class="container pl-0 pr-0">
-                    <nav class="navbar navbar-expand-sm">
-                            <div class="d-flex w-50 order-0">
-                                <a class="navbar-brand mr-1" href="#">Logo</a>
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
+                <nav class="navbar navbar-expand-sm ml-0 pl-0">
+                    <div class="d-flex w-50 order-0 pl-0">
+                        <a class="navbar-brand pl-0 text-info" href="#">&lt;<mark class="text-dark">/</mark>M&gt;</a>
+                    </div>
+                    <div class="input-group mb-3 mx-auto d-block text-center order-0 order-md-1 w-75" id="search-bar">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text bg-light">
+                                <span class="glyphicon glyphicon-search" id="search-1"></span>
                             </div>
-                            <div class="input-group mb-3 mx-auto d-block text-center order-0 order-md-1 w-75" id="search-bar">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text bg-light">
-                                            <span class="glyphicon glyphicon-search" id="search-1"></span>
-                                        </div>
-                                        <input type="search" class="form-control mr-sm-2" id="input-1" ype="search" placeholder="Search" aria-label="Search">
-                                    </div>
-                            </div>
-                            <div class="navbar-collapse collapse dual-nav w-50 order-2 pl-5 pr-0 mr-0">
-                                <ul class="nav navbar-nav ml-auto mr-0 float-right">
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle mr-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Category
-                                            </a>
-                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            </div>
-                                        </li>
-                                        <li class="nav-item">
-                                            <button class="btn btn-info"><span class="glyphicon glyphicon-shopping-cart"></span>&nbspSign in</button>
-                                        </li>
-                                    </ul>
-                            </div>
-                        </nav>
+                            <input type="search" class="form-control mr-sm-2" id="input-1" ype="search" placeholder="Search" aria-label="Search">
+                        </div>
+                    </div>
+                    <div class="navbar-collapse collapse dual-nav w-50 order-2 pl-5 pr-0 mr-0">
+                        <ul class="nav navbar-nav ml-auto mr-0 float-right">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle mr-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Category
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <button class="btn btn-info"><span class="glyphicon glyphicon-shopping-cart"></span>&nbspSign in</button>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
             </div>
         </header>
         <main>
-            <div class="container pb-5">
+            <div class="container mt-5 pb-5">
                 <h1>Blog Dummy Theme Name</h1>
                 <div class="row">
                     <div class="col-md-7 pl-0">
@@ -147,23 +141,23 @@
                                     <span class="glyphicon glyphicon-star-empty"></span>
                                     <p><small>Cliche venmo lomo humblebrag, af VHS asymmetrical seitan literally try-hard waistcoat?</small></p>
                                 </div>
-                            </div>                            
-                        </div>
-                        <div class="row mt-5" id="row4">
-                            <div class="col-md-2">
-                                <div class="test rounded-circle text-center" id="round3">
-                                    KK
+                            </div>          
+                            <div class="row mt-5" id="row4">
+                                <div class="col-md-2">
+                                    <div class="test rounded-circle text-center" id="round3">
+                                        KK
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col pr-0">
-                                <span><strong>Karina K.</strong></span>
-                                <span class="glyphicon glyphicon-star"></span>
+                                <div class="col pr-0">
+                                    <span><strong>Karina K.</strong></span>
                                     <span class="glyphicon glyphicon-star" id="star"></span>
-                                    <span class="glyphicon glyphicon-star" id="star"></span>
-                                    <span class="glyphicon glyphicon-star" id="star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                <p><small>Cliche venmo lomo humblebrag, af VHS asymmetrical seitan literally try-hard waistcoat?</small></p>
-                            </div>
+                                        <span class="glyphicon glyphicon-star" id="star"></span>
+                                        <span class="glyphicon glyphicon-star" id="star"></span>
+                                        <span class="glyphicon glyphicon-star" id="star"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                    <p><small>Cliche venmo lomo humblebrag, af VHS asymmetrical seitan literally try-hard waistcoat?</small></p>
+                                </div>
+                            </div>                  
                         </div>
                     </div>
                     <div class="col-1"></div>
@@ -277,10 +271,9 @@
                                 </div>
                             </div>
                             <div class="col ml-0 mr-0 pl-0 pr-0 h-5 d-inline" id="foot">
-                                <small>Want a customized theme?<a class="nav-link d-inline" href="#">Visit Swiftkind.</a></small>
+                                <small class="ml-0">Want a customized theme?<a class="nav-link d-inline" href="#">Visit Swiftkind.</a></small>
                             </div> 
                         </div>
-                        
                     </div>
                 </div>
             </div>
