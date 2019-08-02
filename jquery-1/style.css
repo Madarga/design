@@ -17,20 +17,24 @@ li.checked{
 }
 
 input{
+}
 
+#todo{
+    width: ;
 }
 
 .container{
     margin-top: 40px;
 }
 
-form{
-    height: 50px;
-    width: 500px;
-}
+
 
 li button{
     visibility: hidden;
+}
+
+.form-control{
+    height: 50px;
 }
 
 
