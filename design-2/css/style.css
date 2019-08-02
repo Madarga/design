@@ -58,11 +58,7 @@ main .col-auto{
     height: 350px;
 }
 
-#card1{
-    float: left;
-}
-
-#card2{
+#card1, #card2{
     float: left;
 }
 
@@ -168,13 +164,13 @@ ul li a{
     color: #696969;
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 714px){
     .col{
         display: none;
     }
 
     header button{
-        margin-left: 380px;
+        margin-left: 520px;
         margin-top: -65px;
     }
 
@@ -214,5 +210,26 @@ ul li a{
 
     .logo-container{
         margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 676px){
+    header button{
+        margin-left: 450px;
+        margin-top: -65px;
+    }
+}
+
+@media screen and (max-width: 676px){
+    header button{
+        margin-left: 420px;
+        margin-top: -65px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    header button{
+        margin-left: 290px;
+        margin-top: -65px;
     }
 }
