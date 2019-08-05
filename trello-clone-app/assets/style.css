@@ -1,8 +1,8 @@
 
-    .insertedcard input {display:none;}
-    .insertedcard .cardspan {display:block;}
-    .insertedcard.edit .cardspan {display:none;}
-    .insertedcard.edit input {display:block; width: 100px; margin-right: 100px;}
+.insertedcard input {display:none;}
+.insertedcard .cardspan {display:block;}
+.insertedcard.edit .cardspan {display:none;}
+.insertedcard.edit input {display:block; width: 100px; margin-right: 100px; padding-left: 5px;}
 
 body{
     background-image: url('./images/jeb-buchman-NjrjrdJE8As-unsplash.jpg');
@@ -29,6 +29,7 @@ body{
     border: 1px solid #fefefe; 
     background: #fafafa; 
     color: #484848;
+    width: 247px;
 }
 
 .newlist { 
@@ -39,8 +40,7 @@ body{
     width: 243px; 
     height: 40px;
     border: 1px solid #8e8e8e; 
-    
-    color: #484848;
+    color: 	#303030;
     opacity: 0.7;
 }
 

@@ -35,19 +35,24 @@ function addCard(){
 
         $(this).before(cardTpl)
 
-        $('.insertedcard').on('click', function(){
+        $('.insertedcard').on('click', function(event){
           var editc = $(this).addClass('edit');
-      
           console.log('koko');
+
+          if(event.target != '.insertedcard'){
+            $('.editedtitle').css('border', 'none');
+          }
           
           $('.editedtitle').keypress(function(event){
             if(event.keyCode == '13'){
+              console.log("Card Title Edited!");
               var editCard = $(this).val();
-              console.log(editCard);
               $(this).css('border', 'none');
               $(this).blur();
               var titleClick = $(this).next().data('title', editCard);
-              console.log($(this).next().data('title'));
+            }else{
+              var editCardClick = $(this).val();
+              $(this).next().data('title', editCardClick);
             }
           })
         }).on('click', 'button', function(event){
@@ -103,13 +108,7 @@ function openModal(){
 
 
 $(document).ready(function () {
-  addCard();
-  deleteList();
-  deleteCard();
-  openModal();
-  sortCard();
-
-  $('#list').keypress(function (event) {
+   $('#list').keypress(function (event) {
     editListTitle();
     
     if (event.keyCode == "13") {
@@ -124,8 +123,8 @@ $(document).ready(function () {
         <div class="card-title bg-warning pt-0 pb-0 d-flex justify-content-between">
         <h3 class="ltitle text-white">${listTitle}</h3>
         <button type="button" class="close float-right" id="closecard">x</button>
-        </div><li class="list-unstyled">
-        <input type="text" class="addlist mt-3 p-2 w-100" name="addlist" id="addcard" placeholder="+ New Card" /></li></div>
+        </div><ul class="list-unstyled "><li class="list-unstyled m-0">
+        <input type="text" class="addlist mt-3 p-2" name="addlist" id="addcard" placeholder="+ New Card" /></li></ul></div>
         `;
 
         $(this).after(newList);
