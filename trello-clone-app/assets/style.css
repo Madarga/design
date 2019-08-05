@@ -1,5 +1,11 @@
+
+    .insertedcard input {display:none;}
+    .insertedcard .cardspan {display:block;}
+    .insertedcard.edit .cardspan {display:none;}
+    .insertedcard.edit input {display:block; width: 100px; margin-right: 100px;}
+
 body{
-    background-image: url('jeb-buchman-NjrjrdJE8As-unsplash.jpg');
+    background-image: url('./images/jeb-buchman-NjrjrdJE8As-unsplash.jpg');
     opacity: 5;
 }
 
@@ -74,6 +80,8 @@ li{
     padding: 0;
     overflow: hidden;
     text-overflow: clip;
+    color: #484848;
+    height: 35px;
 }
 
 #exampleFormControlTextarea1{
@@ -82,12 +90,6 @@ li{
 
 .modal-dialog-centered{
     width: 500px;
-}
-
-.insertedcard{
-    color: #484848;
-    padding: 0;
-    height: 35px;
 }
 
 .ltitle{
