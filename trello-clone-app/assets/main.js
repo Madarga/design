@@ -77,15 +77,6 @@ function editCardTitle(){
         var editCard = $(this).val();
         $(this).css('border', 'none');
         $(this).blur();
-
-        $(".btn-card-link").click(function(){
-          $("#myModal").modal('show');
-          var newTitle = $(this).data('title');
-          $(this).data('title', editCard);
-          var titlec = $(this).data('title');
-          console.log(titlec);
-          $('#modaltitle').text(titlec);
-        });
       }
     })
   }).on('click', 'button', function(event){
@@ -104,7 +95,7 @@ function deleteCard(){
 
 function openModal(){
 	$(".btn-card-link").click(function(){
-    $("#myModal").modal('show');
+    $("#cardModal").modal('show');
     var title= $(this).data('title');
     console.log(title);
     $('#modaltitle').text(title);
