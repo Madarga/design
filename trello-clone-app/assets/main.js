@@ -34,9 +34,27 @@ function addCard(){
         `;
 
         $(this).before(cardTpl)
+
+        $('.insertedcard').on('click', function(){
+          var editc = $(this).addClass('edit');
+      
+          console.log('koko');
+          
+          $('.editedtitle').keypress(function(event){
+            if(event.keyCode == '13'){
+              var editCard = $(this).val();
+              console.log(editCard);
+              $(this).css('border', 'none');
+              $(this).blur();
+              var titleClick = $(this).next().data('title', editCard);
+              console.log($(this).next().data('title'));
+            }
+          })
+        }).on('click', 'button', function(event){
+          event.stopPropagation();
+        });
       }
 
-      editCardTitle();
       deleteCard();
       sortCard();
       openModal();
@@ -62,25 +80,6 @@ function editListTitle(){
         return false;
       }
     });
-  });
-}
-
-
-function editCardTitle(){
-  $('.insertedcard').on('click', function(){
-    var editc = $(this).addClass('edit');
-
-    console.log('koko');
-    
-    $('.editedtitle').keypress(function(event){
-      if(event.keyCode == '13'){
-        var editCard = $(this).val();
-        $(this).css('border', 'none');
-        $(this).blur();
-      }
-    })
-  }).on('click', 'button', function(event){
-    event.stopPropagation();
   });
 }
 
